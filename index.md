@@ -1,5 +1,7 @@
 # Welcome to Java!
 
+[TOC]
+
 ## Array Lists
 
 Creating Array Lists, and converting between Array Lists and arrays can be tricky. See these examples:
