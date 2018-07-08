@@ -1082,22 +1082,21 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>index</title></head><body><article class="markdown-body"><h1 id="welcome-to-java">Welcome to Java!</h1>
+</style><title>arraylists</title></head><body><article class="markdown-body"><h1 id="welcome-to-java">Welcome to Java!</h1>
 <div class="toc">
 <ul>
 <li><a href="#welcome-to-java">Welcome to Java!</a><ul>
-<li><a href="#topics">Topics</a></li>
-<li><a href="#tax-calculator">Tax Calculator</a></li>
+<li><a href="#array-lists">Array Lists</a></li>
+<li><a href="#arrays-int-vs-integer">Arrays: int[] vs Integer[]</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="topics">Topics</h2>
-<ul>
-<li>File IO</li>
-<li>Data structures</li>
-<li>Algorithmic Complexity (Big "O" Notation)</li>
-<li>Web Development (frontend, backend; not in Java)</li>
-</ul>
-<h2 id="tax-calculator">Tax Calculator</h2>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/TaxCalculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></article></body></html>
+<h2 id="array-lists">Array Lists</h2>
+<p>Creating Array Lists, and converting between Array Lists and arrays can be tricky. See these examples:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/ArrayListExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h2 id="arrays-int-vs-integer">Arrays: <code>int[]</code> vs <code>Integer[]</code></h2>
+<p>Creating <code>Integer[]</code> and <code>int[]</code> arrays, and converting back and forth, can be tricky. Remember that <code>int</code> is a primitive data type, whereas <code>Integer</code> is an object.</p>
+<p>When we pass an <code>Integer</code> to a function, a pointed to its location in memory is passed, and so the value it holds can be altered. When we pass an <code>int</code> variable to a function, its value is passed, and any changes happen only within the scope of the function call.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/intandInteger?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></article></body></html>
