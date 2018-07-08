@@ -1083,7 +1083,7 @@ body .markdown-body
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><title>fileio</title></head><body><article class="markdown-body"><p><a href="https://zsiegel92.github.io/java_tutorial">All Lessons</a></p>
-<h1 id="file-io">File IO</h1>
+<h1 id="file-io">File IO<a class="headerlink" href="#file-io" title="Permanent link"></a></h1>
 <div class="toc">
 <ul>
 <li><a href="#file-io">File IO</a><ul>
@@ -1094,72 +1094,81 @@ body .markdown-body
 </li>
 </ul>
 </div>
-<h2 id="getting-user-input-from-console">Getting user Input from Console</h2>
-<p>```java
-import java.io.File;
-import java.io.IOException;
-import java.util.Scanner;
-import java.util.function.ToDoubleFunction;
-import java.io.FileNotFoundException;</p>
-<p>class Main {
-    public static void main(String[] args) {
-        System.out.println("Please enter some text");
-        String text;
-        Scanner inp = new Scanner(System.in);
-        text = inp.nextLine();
-        inp.close();
-        System.out.println("You entered " + text);
-    }
-}
-```</p>
-<h2 id="reading-from-a-file-using-scanner-counting-number-of-lines-saving-each-line-in-an-array">Reading from a file using <code>Scanner</code>, counting number of lines, saving each line in an array</h2>
-<p>```java
-import java.io.File;
-import java.io.IOException;
-import java.util.Scanner;
-import java.io.FileNotFoundException;</p>
-<p>class Main {
-    public static void main(String[] args) throws FileNotFoundException {
-        String fname = "data.txt";
-        File file new File(fname);;
-        Scanner sc = new Scanner(file);</p>
-<pre><code>    int counter = 0;
-    while (sc.hasNextLine()) {
-        counter++;
-        sc.nextLine();
-        sc.nextLine();
-    }
-    System.out.println("There are " + counter + " entries");
+<h2 id="getting-user-input-from-console">Getting user Input from Console<a class="headerlink" href="#getting-user-input-from-console" title="Permanent link"></a></h2>
+<p>Some math <span class="arithmatex">\(\frac{5}{2}\)</span>.</p>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">5</span>
+</pre></div>
 
-    sc = new Scanner(file);
+<p>and</p>
+<div class="codehilite"><pre><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.function.ToDoubleFunction</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.FileNotFoundException</span><span class="o">;</span>
 
-    String[] lines = new String[counter];
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Please enter some text&quot;</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">text</span><span class="o">;</span>
+        <span class="n">Scanner</span> <span class="n">inp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+        <span class="n">inp</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;You entered &quot;</span> <span class="o">+</span> <span class="n">text</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
 
-    for (int i = 0; i &lt; counter; i++) {
-        try {
-            lines[i] = sc.nextLine();
-        } catch (Exception e) {
-            System.out.println("Invalid input");
-        }
-    }
-    sc.close();
-}
-</code></pre>
-<p>}
-```</p>
-<h2 id="writing-to-a-file-using-printwriter">Writing to a File using <code>PrintWriter</code></h2>
-<p>```java
-import java.io.PrintWriter;
-import java.io.FileNotFoundException;
-import java.io.UnsupportedEncodingException;</p>
-<p>class Writer{</p>
-<pre><code>public static void main(String[] args) throws FileNotFoundException,UnsupportedEncodingException{
-    PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
-    writer.println("The first line");
-    writer.println("The second line");
-    writer.printf("hey %.2f",105.3);
-    writer.close();
-}
-</code></pre>
-<p>}</p>
-<p>```</p></article></body></html>
+<h2 id="reading-from-a-file-using-scanner-counting-number-of-lines-saving-each-line-in-an-array">Reading from a file using <code>Scanner</code>, counting number of lines, saving each line in an array<a class="headerlink" href="#reading-from-a-file-using-scanner-counting-number-of-lines-saving-each-line-in-an-array" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.FileNotFoundException</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">FileNotFoundException</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">fname</span> <span class="o">=</span> <span class="s">&quot;data.txt&quot;</span><span class="o">;</span>
+        <span class="n">File</span> <span class="n">file</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">fname</span><span class="o">);;</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+
+        <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">sc</span><span class="o">.</span><span class="na">hasNextLine</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">counter</span><span class="o">++;</span>
+            <span class="n">sc</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+            <span class="n">sc</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;There are &quot;</span> <span class="o">+</span> <span class="n">counter</span> <span class="o">+</span> <span class="s">&quot; entries&quot;</span><span class="o">);</span>
+
+        <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+
+        <span class="n">String</span><span class="o">[]</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">counter</span><span class="o">];</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">counter</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">try</span> <span class="o">{</span>
+                <span class="n">lines</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Invalid input&quot;</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">sc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<h2 id="writing-to-a-file-using-printwriter">Writing to a File using <code>PrintWriter</code><a class="headerlink" href="#writing-to-a-file-using-printwriter" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="kn">import</span> <span class="nn">java.io.PrintWriter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.FileNotFoundException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.UnsupportedEncodingException</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">Writer</span><span class="o">{</span>
+
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">FileNotFoundException</span><span class="o">,</span><span class="n">UnsupportedEncodingException</span><span class="o">{</span>
+        <span class="n">PrintWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintWriter</span><span class="o">(</span><span class="s">&quot;the-file-name.txt&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">);</span>
+        <span class="n">writer</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;The first line&quot;</span><span class="o">);</span>
+        <span class="n">writer</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;The second line&quot;</span><span class="o">);</span>
+        <span class="n">writer</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;hey %.2f&quot;</span><span class="o">,</span><span class="mf">105.3</span><span class="o">);</span>
+        <span class="n">writer</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div></article></body></html>

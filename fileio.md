@@ -6,6 +6,15 @@
 
 ## Getting user Input from Console
 
+Some math $\frac{5}{2}$.
+
+```python
+def hello():
+	return 5
+```
+
+and
+
 ```java
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +33,7 @@ class Main {
     }
 }
 ```
+
 ## Reading from a file using `Scanner`, counting number of lines, saving each line in an array
 
 ```java
@@ -80,5 +90,4 @@ class Writer{
 		writer.close();
 	}
 }
-
 ```
