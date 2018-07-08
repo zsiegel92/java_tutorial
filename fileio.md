@@ -6,15 +6,6 @@
 
 ## Getting user Input from Console
 
-Some math $\frac{5}{2}$.
-
-```python
-def hello():
-	return 5
-```
-
-and
-
 ```java
 import java.io.File;
 import java.io.IOException;
