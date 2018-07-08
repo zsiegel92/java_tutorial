@@ -7,6 +7,7 @@
 * File IO
 * Data structures
 * Algorithmic Complexity (Big "O" Notation)
+* Algorithms
 * Web Development (frontend, backend; not in Java)
 
 ## Tax Calculator
