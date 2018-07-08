@@ -1086,7 +1086,80 @@ body .markdown-body
 <h1 id="file-io">File IO</h1>
 <div class="toc">
 <ul>
-<li><a href="#file-io">File IO</a></li>
+<li><a href="#file-io">File IO</a><ul>
+<li><a href="#getting-user-input-from-console">Getting user Input from Console</a></li>
+<li><a href="#reading-from-a-file-using-scanner-counting-number-of-lines-saving-each-line-in-an-array">Reading from a file using Scanner, counting number of lines, saving each line in an array</a></li>
+<li><a href="#writing-to-a-file-using-printwriter">Writing to a File using PrintWriter</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<p>File IO stuff</p></article></body></html>
+<h2 id="getting-user-input-from-console">Getting user Input from Console</h2>
+<p>```java
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.function.ToDoubleFunction;
+import java.io.FileNotFoundException;</p>
+<p>class Main {
+    public static void main(String[] args) {
+        System.out.println("Please enter some text");
+        String text;
+        Scanner inp = new Scanner(System.in);
+        text = inp.nextLine();
+        inp.close();
+        System.out.println("You entered " + text);
+    }
+}
+```</p>
+<h2 id="reading-from-a-file-using-scanner-counting-number-of-lines-saving-each-line-in-an-array">Reading from a file using <code>Scanner</code>, counting number of lines, saving each line in an array</h2>
+<p>```java
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.io.FileNotFoundException;</p>
+<p>class Main {
+    public static void main(String[] args) throws FileNotFoundException {
+        String fname = "data.txt";
+        File file new File(fname);;
+        Scanner sc = new Scanner(file);</p>
+<pre><code>    int counter = 0;
+    while (sc.hasNextLine()) {
+        counter++;
+        sc.nextLine();
+        sc.nextLine();
+    }
+    System.out.println("There are " + counter + " entries");
+
+    sc = new Scanner(file);
+
+    String[] lines = new String[counter];
+
+    for (int i = 0; i &lt; counter; i++) {
+        try {
+            lines[i] = sc.nextLine();
+        } catch (Exception e) {
+            System.out.println("Invalid input");
+        }
+    }
+    sc.close();
+}
+</code></pre>
+<p>}
+```</p>
+<h2 id="writing-to-a-file-using-printwriter">Writing to a File using <code>PrintWriter</code></h2>
+<p>```java
+import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;</p>
+<p>class Writer{</p>
+<pre><code>public static void main(String[] args) throws FileNotFoundException,UnsupportedEncodingException{
+    PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
+    writer.println("The first line");
+    writer.println("The second line");
+    writer.printf("hey %.2f",105.3);
+    writer.close();
+}
+</code></pre>
+<p>}</p>
+<p>```</p></article></body></html>
